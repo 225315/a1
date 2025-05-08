@@ -14,7 +14,7 @@ def model(text):
         history.append({'role':'system','content':promot})
     history.append({'role':'user','content':text})
     completion = client.chat.completions.create(
-        model="qwen-plus",
+        model="deepseek-r1",
         messages=history
     )
     a=completion.choices[0].message.reasoning_content+completion.choices[0].message.content
